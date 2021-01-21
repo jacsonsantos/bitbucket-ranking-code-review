@@ -1,0 +1,125 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f5f5f5;
+}
+.box-ranking {
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+}
+.ranking {
+  padding: 0;
+  list-style-type: none;
+}
+.ranking .row {
+  display: flex;
+  flex-flow: column;
+  border-radius: 6px;
+  box-shadow: 0 0 15px 1px #ececec;
+  margin-bottom: 20px;
+  background: #fff;
+  cursor: pointer;
+}
+.ranking .row .ranking-item {
+  display: flex;
+  justify-content: space-between;
+}
+.ranking .row .ranking-item .ranking-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #575760;
+  border-right: 1px solid #ececec;
+}
+.ranking .row .ranking-item .ranking-name {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  border-right: 1px solid #ececec;
+}
+.ranking .row .ranking-item .ranking-name figure.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #f5f5f5;
+  display: inline-block;
+}
+.ranking .row .ranking-item .ranking-name figure.avatar img {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  width: 100%;
+}
+.ranking .row .ranking-item .ranking-name .name {
+  display: flex;
+  flex-flow: column;
+  font-size: 1.2rem;
+  color: #575760;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.ranking .row .ranking-item .ranking-name .name .legend {
+  font-size: .8rem;
+  font-weight: 100;
+  margin-top: 3px;
+}
+.ranking .row .ranking-item .ranking-point {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #575760;
+  border-right: 1px solid #ececec;
+  flex-flow: column;
+}
+.ranking .row .ranking-item .ranking-point .legend {
+  font-size: 1rem;
+  font-weight: 100;
+}
+.ranking .row .ranking-item .ranking-score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #575760;
+  flex-flow: column;
+}
+.ranking .row .ranking-item .ranking-score .legend {
+  font-size: 1rem;
+  font-weight: 100;
+}
+.ranking .row .ranking-detail {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ececec;
+}
+.ranking .row .ranking-detail .column {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #575760;
+  border-right: 1px solid #ececec;
+}
+.ranking .row .ranking-detail .column:last-child {
+  border-right: 0;
+}
+.ranking .row .ranking-detail .column .title {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 8px;
+}

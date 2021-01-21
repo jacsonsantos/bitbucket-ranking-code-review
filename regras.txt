@@ -1,0 +1,14 @@
+Gamificação por Repositorio.
+
+# Somar pontos
+1.0 - Abrir PR - 15
+1.1 - PR Aprovado - 15
+1.2 - PR Recusado - 20
+1.3 - Comentario - 20
+1.4 - Resposta - 10
+1.5 - Merge - 35
+
+# Subtrair pontos
+2.0 - PR Recusado - 15
+2.1 - Remover Aprovação do PR - 15
+2.2 - Excluir Comentario - 20

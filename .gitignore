@@ -1,0 +1,11 @@
+*.iml
+*.idea
+.vscode
+.DS_Store
+node_modules
+npm-debug.log
+*.pem
+credentials.json
+store.db
+package-lock.json
+examples

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Review | Ranking</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/addon.css" type="text/css" />
+    <script src="https://bitbucket.org/atlassian-connect/all.js" type="text/javascript"></script>
+</head>
+<body>
+
+<section class="box-ranking">
+    <h1>Code Review | Ranking</h1>
+    <ul class="ranking">
+        {{#each lines}}
+        <li class="row" onclick="open_detail(this);">
+            <div class="ranking-item">
+                <div class="ranking-position">
+                    <span>{{plusOne @index}}º</span>
+                </div>
+                <div class="ranking-name">
+                    <figure class="avatar">
+                        <img src="{{this.user.links.avatar.href}}" alt="{{this.user.display_name}}" title="{{this.user.display_name}}">
+                    </figure>
+                    <div class="name">
+                        <label for="{{this.user.display_name}}">{{this.user.display_name}}</label>
+                    </div>
+                </div>
+                <div class="ranking-point">
+                    <span>{{this.points}}</span>
+                    <span class="legend">Pontos</span>
+                </div>
+                <div class="ranking-score">
+                    <span>{{this.engagementRate}}%</span>
+                    <span class="legend">Engajado</span>
+                </div>
+            </div>
+            <div class="ranking-detail" style="display: none;">
+                <div class="column">
+                    <label class="title" for="PR Abertos">PR Abertos</label>
+                    <span>{{this.openPRsTotal}}</span>
+                </div>
+                <div class="column">
+                    <label class="title" for="PR Aprovados">PR Aprovados</label>
+                    <span>{{this.approvedTotal}}</span>
+                </div>
+                <div class="column">
+                    <label class="title" for="PR Recusados">PR Recusados</label>
+                    <span>{{this.rejectedTotal}}</span>
+                </div>
+                <div class="column">
+                    <label class="title" for="PR Comentados">PR Comentados</label>
+                    <span>{{this.commentCreatedTotal}}</span>
+                </div>
+                <div class="column">
+                    <label class="title" for="PR Respondidos">PR Respondidos</label>
+                    <span>{{this.commentCreatedReplyTotal}}</span>
+                </div>
+                <div class="column">
+                    <label class="title" for="Mesclados">Mesclados</label>
+                    <span>{{this.merges}}</span>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</section>
+<script>
+    function open_detail(el) {
+        let rankingDetail = el.querySelector('.ranking-detail');
+        let display = rankingDetail.style.display;
+        
+        rankingDetail.style.display = display != 'none' ? 'none' : 'flex';
+    }
+</script>
+</body>
+</html>

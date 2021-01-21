@@ -1,0 +1,40 @@
+{
+    "key": "ranking-review",
+    "name": "Ranking Review",
+    "description": "Ranking para quem mais revisar Pull Request",
+    "vendor": {
+        "name": "Jacson Santos",
+        "url": "https://jacsonsantos.com.br"
+    },
+    "baseUrl": "{{localBaseUrl}}",
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/installed",
+        "uninstalled": "/uninstalled"
+    },
+    "modules": {
+        "webhooks": [
+            {
+                "event": "*",
+                "url": "/webhook"
+            }
+        ],
+        "repoPages": [
+            {
+                "url": "/connect-hub?workspace={repository.workspace.slug}&project={repository.project.uuid}&repository={repository.uuid}",
+                "name": {
+                    "value": "Ranking"
+                },
+                "location": "org.bitbucket.repository.navigation",
+                "key": "ranking",
+                "params": {
+                    "auiIcon": "aui-iconfont-group"
+                }
+            }
+        ]
+    },
+    "scopes": ["account", "repository","pullrequest"],
+    "contexts": ["account"]
+}
