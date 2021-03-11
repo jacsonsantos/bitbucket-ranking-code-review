@@ -4,6 +4,8 @@ Help your friends evaluating the Pull Request and receive points for it.
 
 [Install add-on now](https://bitbucket.org/site/addons/authorize?addon_key=ranking-review)
 
+![design](mockup.png)
+
 # TODO
 
 * [x] Points for Dev.
